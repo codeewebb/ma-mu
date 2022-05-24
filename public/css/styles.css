@@ -1,0 +1,1235 @@
+/* ###################   Start public design ############### */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: changa;
+    width: 100%;
+    height: 100%;
+    background-color: var(--content-color);
+}
+
+@font-face {
+    font-family: changa;
+    src: url(./changa/Changa-Regular.ttf);
+}
+
+:root {
+    --main-color: #21242b;
+    --sub-color: #4ecdc4;
+    --danger-color: #b00404;
+    /* --sub-color: #ffb100; */
+    /* --sub-color: #01a0b5; */
+    /* --sub-color:#027989; */
+
+    /* --sub-color: #04645b; */
+    /* --sub-color: #ff9800; */
+    /* --sub-color: #98a32b; */
+    /* --sub-color:#777111; */
+    /* --sub-color:#990022; */
+    /* --sub-color:#660000; */
+
+    --content-color: #eaeaea;
+    /* --content-color: #1a1b20; */
+    --title-color: #7e7e7e;
+}
+
+.animation {
+    animation-name: animate;
+    animation-iteration-count: infinite;
+    animation-duration: 0.9s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animation2 {
+    animation-name: animate2;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+.content-r{
+    position: relative;
+}
+.span {
+    border: 2px solid var(--sub-color);
+    border-radius: 50%;
+    border-top-color:white ;
+    border-bottom-color:white ;
+    width: 10px;
+    height: 10px;
+    top: 36px;
+    right: 58px;
+    position: absolute;
+}
+
+
+.span2 {
+    border: 2px solid var(--sub-color);
+    border-radius: 50%;
+    border-top-color:white ;
+    border-bottom-color:white ;
+    width: 10px;
+    left: 59px;
+    top: 36px;
+    height: 10px;
+    position: absolute;
+
+}
+@keyframes animate {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes animate2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sub-content h2 {
+    text-align: right;
+    font-size: 1.4em;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    text-align: right;
+    font-size: 1em;
+    color: white;
+    padding: 2px 10px !important;
+    background-color: transparent;
+    border: 2px solid var(--sub-color);
+    border-radius: 0;
+    outline: none !important;
+    height: 45px;
+    width: 100%;
+}
+
+form textarea {
+    height: 150px;
+}
+form select option {
+    background-color: var(--main-color);
+}
+/* form button {
+    min-width: 100px;
+    height: 45px;
+    padding: 10px;
+    color: white;
+    background-color: var(--sub-color);
+    border-radius: 0;
+} */
+button[type="submit"] {
+    min-width: 100px;
+    height: 45px;
+    padding: 10px;
+    color: white;
+    background-color: var(--sub-color);
+    border-radius: 0;
+}
+
+.link-paginate {
+    margin-top: 20px;
+    box-shadow: 0 0 4px 0 #8d8d8da3;
+    padding: 5px 0;
+}
+
+.link-paginate .pagination {
+    margin: 0;
+}
+
+.link-paginate .pagination .active {
+    background-color: var(--sub-color) !important;
+    color: white !important;
+    transition: 0.5s ease-in-out;
+}
+
+.link-paginate .pagination .page-item {
+    padding: 7px;
+}
+
+.link-paginate .pagination .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: var(--sub-color);
+    /* color: var(--sub-color); */
+    background-color: white;
+    border: 1px solid white;
+    font-weight: 900;
+    border-radius: 0;
+}
+
+table {
+    direction: rtl;
+    width: 100%;
+}
+
+table thead {
+    background-color: var(--main-color);
+    color: var(--main-color);
+}
+
+table thead td {
+    padding: 15px 0;
+}
+
+table td {
+    border-left: 2px solid white;
+    padding: 10px 0;
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+
+table td:first-of-type {
+    border-right: 2px solid white;
+}
+table tbody {
+    background-color: transparent;
+}
+
+table tr {
+    transition: 0.5s ease-in-out;
+}
+
+table tr:hover {
+    background-color: var(--main-color);
+}
+
+table .opartion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+table .opartion button {
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    width: 48%;
+}
+table .opartion button a {
+    color: white;
+    text-decoration: none;
+}
+
+.opartion .btn-edit-data {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+.opartion .btn-delete-data {
+    background-color: var(--danger-color);
+}
+
+/* ======= Start Side Menu style ========  */
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    /* min-height: 100vh; */
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
+
+.row .content {
+    /* width: 80%; */
+    text-align: center;
+    padding: 0;
+    color: var(--title-color);
+    position: relative;
+    /* transition: width 5s ease-in-out; */
+    background-color: var(--content-color);
+}
+
+.content .fa-bars {
+    /* position: absolute; */
+    /* right: 20px;
+  top: 10px; */
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--sub-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.content .fa-bars:hover {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+.row .sidemenu {
+    background-color: var(--main-color);
+    /* width: 20%; */
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: changa;
+    transition: transform 5s ease-in-out;
+}
+
+.sidemenu.hide {
+    display: none;
+}
+
+.sidemenu .dashboard {
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border: 4px solid var(--sub-color);
+}
+
+.sidemenu .dashboard span,
+.dashboard i {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.sidemenu ul {
+    border-radius: 20px;
+    list-style: none;
+}
+
+.sidemenu ul li.active {
+    background-color: var(--sub-color);
+}
+
+.sidemenu ul li {
+    margin-bottom: 10px;
+    padding: 15px 0 15px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: right;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.sidemenu ul li i {
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.sidemenu ul .sub-menu {
+    margin-right: 30px;
+    transition: border 0.5s ease-in-out;
+    padding: 5px 10px;
+}
+
+.sidemenu ul .sub-menu:hover {
+}
+
+.sidemenu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidemenu ul li:hover {
+    background-color: var(--sub-color);
+}
+
+@media (max-width: 1000px) {
+    .sidemenu .dashboard h5 span {
+        display: none;
+    }
+    .sidemenu ul li i {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+        font-size: 2em;
+    }
+    .sidemenu ul li {
+        text-align: center;
+    }
+    .sidemenu ul .sub-menu {
+        margin: 0;
+    }
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ======== Start form login ========= */
+.login-content {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+
+.login-content .login-header {
+    text-align: right;
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: var(--sub-color);
+}
+.login-content .login-header h5 {
+    margin-right: 60px;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: var(--main-color);
+}
+.login-form {
+    /* background-color: var(--danger-color);
+    height: 100%;
+    height: 100vh; */
+    /* background-color: white; */
+}
+.login-form .form-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.login-form .form-group label {
+    color: var(--main-color);
+}
+
+.login-form .form-group input {
+    color: var(--main-color);
+    padding-right: 50px !important;
+}
+
+@media(max-width:1000px){
+    .login-content {
+    width: 90%;
+}
+.login-form .form-group label {
+   width: 50%;
+
+}
+ .login-form .form-group{
+     width: 80%;
+ }
+}
+
+
+.login-form .col-md-6 {
+    padding: 0;
+    position: relative;
+}
+
+.login-form .box-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.login-form .form-group span {
+    display: block !important;
+}
+.login-form .col-md-6 i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background-color: var(--sub-color);
+    line-height: 45px;
+    font-size: 18px;
+    color: white;
+}
+/* ======== Start form login ========= */
+
+
+
+/* ======= End Side Menu style ========  */
+
+/* ###################   End public design ############### */
+
+/* ======= Start header style ====== */
+
+.header {
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header .user {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.header .user h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.header .user button {
+    background-color: var(--sub-color);
+    color: white;
+    margin-right: 20px;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.header .user button a {
+    text-decoration: none;
+    color: white;
+}
+.header .user button:hover {
+    background-color: transparent;
+    box-shadow: 0 0 6px 0 var(--sub-color);
+}
+
+/* ======= End header style ====== */
+
+/* ======= Start home page style ====== */
+
+.genarle-report {
+    /* background-color: var(--title-color); */
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.genarle-report .col-lg-2,
+.genarle-report .col-sm-3,
+.genarle-report .col-md-4 {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    /* border: 2px solid red; */
+}
+
+.genarle-report .content-r {
+    border: 4px solid var(--main-color);
+    font-size: 1.2em;
+    font-weight: 100;
+    padding: 10px;
+    box-shadow: 0 0 6px 0 var(--main-color);
+}
+
+.genarle-report .content-r hr {
+    border: 2px solid var(--main-color);
+}
+
+.genarle-report .content-r i {
+    font-size: 2em;
+    color: var(--sub-color);
+}
+
+.genarle-report .content-r span {
+    display: block;
+    color: var(--title-color);
+}
+
+/* ======= End home page style ====== */
+
+/* ======= Start category page style ====== */
+
+.sub-content {
+    padding: 20px;
+    margin: 20px;
+    background-color: #343842;
+    color: white;
+    box-shadow: 0 0 6px black;
+    min-height: 85vh;
+}
+
+/* ------- add category page -------  */
+.cat-content .form-add-cat {
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    /* background-color: blue; */
+}
+.form-add-cat input {
+    width: 250px;
+    margin: 0 20px;
+}
+
+/* .form-add-cat button{
+    width: 100px;
+    height: 45px;
+    padding: 10px;
+    color: white;
+    background-color: var(--sub-color);
+    border-radius: 0;
+} */
+
+.form-add-cat .form-group {
+    /* background-color: red; */
+}
+
+.sub-content .search-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    /* background-color: yellow; */
+}
+
+.search-content .box-search {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    /* background: blue; */
+    padding: 5px 0;
+    justify-content: end;
+}
+
+/* .search-content .box-search label{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border: 3px solid var(--sub-color);
+} */
+
+.search-content form button[type="submit"] {
+    margin-left: 10px;
+    width: 45px !important;
+    height: 45px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sub-color);
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    border: 3px solid var(--sub-color);
+    color: white;
+    margin: 0;
+    outline: none;
+}
+
+.search-content .box-search label:hover {
+    background-color: var(--sub-color);
+}
+
+.search-content .box-search .f-control {
+    text-align: right;
+    font-size: 1em;
+    color: white;
+    padding: 2px 10px !important;
+    background-color: transparent;
+    border: 2px solid var(--sub-color);
+    border-radius: 0;
+    outline: none !important;
+    width: 70%;
+    margin: 0;
+}
+
+.search-content .select-count-cat {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40%;
+    /* background-color: blue; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 10px;
+}
+
+.search-content .select-count-cat label {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+.search-content .select-count-cat select {
+    width: 100px;
+    padding: 2px;
+    margin-right: 10px;
+    outline: none !important;
+}
+
+.show-cat-content {
+    padding: 20px;
+    /* background-color: red; */
+}
+
+/* ======= End category page style ====== */
+
+/* ======= Start type page style ====== */
+.type-content {
+}
+.type-content .form-add-type {
+    /* background-color: red; */
+    padding: 20px;
+}
+.form-add-type .row {
+    flex-direction: row-reverse;
+    /* background-color: chartreuse; */
+}
+.type-content .form-add-type .form-group {
+    /* background-color: blue; */
+    padding: 0 10px;
+}
+.form-add-type .form-group label {
+    text-align: right;
+    background-color: brown;
+    /* width: 100%; */
+}
+.type-content .form-add-type input,
+.type-content .form-add-type select {
+    width: 100%;
+}
+.type-content .form-add-type .col-md-12 {
+    /* background-color: brown; */
+    text-align: left;
+}
+/* ======= End type page style ====== */
+
+/* ======= Start weater page style ====== */
+.weater-content .form-add-weater {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    /* background-color: blue; */
+}
+
+.show-weater-content {
+    padding: 10px 0;
+    /* background-color: red; */
+}
+
+.form-add-weater input {
+    width: 350px;
+    margin: 0 20px;
+}
+/* ======= End weater page style ====== */
+
+/* ======= Start register user page style ====== */
+.register-content .form-add-user {
+    padding: 20px;
+    margin-top: 20px;
+}
+.register-content .form-add-user .row {
+    flex-direction: row-reverse;
+}
+
+.box-input-checkbox {
+    /* background-color: #b00404; */
+    display: flex;
+    justify-content: flex-end;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+}
+
+.box-input-checkbox input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    outline: none;
+}
+
+.box-input-checkbox label {
+    /* background-color: aqua; */
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.form-add-user .box-btn {
+    text-align: left;
+    /* background-color: black; */
+}
+
+/* ======= End register user page style ====== */
+
+/* ======= Start sales  page style ====== */
+.sales-content {
+    background-color: var(--main-color);
+    min-height: 100vh;
+}
+.sales-content .header-sales {
+    background-color: var(--sub-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 20px;
+}
+.sales-content .header-sales button {
+    box-shadow: 0 0 3px #817d7dc4;
+    transition: 0.5s ease-in-out;
+    border-radius: 0;
+}
+.sales-content .header-sales button i {
+    transition: 0.5s ease-in-out;
+}
+
+.sales-content .header-sales button:hover i {
+    transform: translateX(-5px);
+}
+
+.sales-content .header-sales button,
+.sales-content .header-sales h5 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.sales-content .header-sales h5 i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+.header-sales button:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+
+.sales-content .tables {
+    padding: 15px;
+}
+
+.sales-content .tables .row {
+    flex-direction: row-reverse;
+    padding: 0 15px;
+}
+
+.sales-content .tables .col-md-3 {
+    padding: 10px;
+    margin: 10px 0;
+    min-height: 100px;
+}
+
+.sales-content .tables .direct-sales {
+    padding: 40px 10px;
+    background-color: var(--sub-color);
+    cursor: pointer;
+    height: 100%;
+}
+.sales-content .tables .direct-sales:hover img,
+.tables .new-table:hover img,
+.tables .table:hover img {
+    transform: scale(1.2);
+}
+.tables .direct-sales span,
+.tables .new-table span,
+.tables .table span {
+    display: block;
+    font-size: 1.4em;
+    color: white;
+}
+.tables img {
+    margin: 5px 0;
+    transition: transform 0.5s ease-in-out;
+}
+.tables a {
+    text-decoration: none;
+}
+.tables .table,
+.tables .new-table {
+    height: 100%;
+    padding: 40px 10px;
+    background-color: white;
+    cursor: pointer;
+}
+.tables .new-table span,
+.tables .table span {
+    color: var(--main-color);
+}
+
+/* ======= End  sales page style ====== */
+
+/* ======= Start  sales table page style ====== */
+.sales-table {
+    min-height: 120vh;
+    padding-bottom: 50px;
+}
+.sales-table .row {
+    margin: 0;
+    padding: 10px;
+    min-height: 120vh;
+}
+
+.sales-table .fill-content {
+    /* background-color: red; */
+}
+
+.fill-content .fill-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 10px 20px;
+    border-bottom: 5px solid var(--sub-color);
+}
+
+.fill-content .fill-title h4,
+.fill-content .fill-title span {
+    color: var(--main-color);
+    font-size: 1.2em;
+    color: white;
+}
+
+.fill-content button {
+    min-width: 100px;
+    height: 45px;
+    padding: 10px;
+    color: white;
+    background-color: var(--sub-color);
+    border-radius: 0;
+}
+
+.fill-content .opartion {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 50px 0 0;
+}
+
+.fill-content button {
+    width: 24%;
+}
+
+.fill-content button.reject {
+    margin: 0 15px;
+    background-color: var(--danger-color);
+}
+
+.fill-content .weaters {
+    margin: 20px 0;
+    /* background-color: black; */
+    display: flex;
+    justify-content: end;
+}
+.weaters form {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+}
+.weaters form label {
+    width: 30%;
+}
+
+.money {
+    margin: 30px 0;
+    text-align: right;
+}
+.money strong {
+    background-color: white;
+    color: var(--main-color);
+    padding: 5px 10px;
+}
+
+.fill-content .push {
+    margin: 30px 0;
+    min-height: 20vh;
+}
+
+.fill-content .push input[type="text"],
+.weaters form select {
+    width: 70%;
+    border: 2px solid white;
+    font-size: 0.9em;
+    text-align: right;
+    direction: rtl;
+}
+
+.fill-content .push .kash,
+.fill-content .push .bank {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.fill-content .push .kash form label {
+    padding: 0 10px;
+    width: 30%;
+}
+
+.push form select option {
+    color: var(--main-color);
+    background-color: white !important;
+}
+
+.fill-content .push .bank select {
+    direction: rtl;
+    outline: none;
+    border: none;
+    width: 30%;
+}
+
+.fill-content .push .bank select,
+.fill-content .push form label {
+    background-color: white;
+    height: 45px;
+    line-height: 45px;
+    margin: 0;
+    color: var(--main-color);
+    padding: 0;
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: 900;
+}
+
+.fill-content .push .bank form,
+.fill-content .push .kash form {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 50%;
+}
+
+.food-list .types-foods {
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+}
+
+.types-foods .col-md-6 {
+    padding: 0 5px;
+}
+
+.food-list .col-md-2 {
+    background-color: var(--danger-color);
+    padding: 0;
+    text-align: center;
+}
+
+.food-list ul {
+    list-style: none;
+    width: 100%;
+}
+
+.types-foods .cat {
+    z-index: 999;
+}
+.food-list ul li {
+    padding: 10px 5px;
+    margin: 10px 0;
+    background-color: white;
+    color: var(--main-color);
+    cursor: pointer;
+    box-shadow: 0 0 3px #817d7dc4;
+    /* border-radius: 5px; */
+}
+.food-list ul#ul-types {
+    /* color: #000; */
+    /* transition: 1s ease-in-out; */
+    /* transform: translateY(200px); */
+    /* display: none; */
+    /* background-color: white; */
+}
+
+.food-list ul li.select-type-food {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+    z-index: 9;
+    font-size: 14px;
+    padding: 5px 15px;
+}
+.select-type-food {
+}
+
+.fill-content .orders table thead {
+    background-color: var(--sub-color);
+}
+.fill-content .orders {
+    /* background-color: var(--title-color); */
+}
+
+.sales-table .food-list {
+    /* background-color: saddlebrown; */
+    padding: 10px;
+    /* background-color: #fffdfdf5 */
+    background-color: var(--sub-color);
+}
+.food-list h5 {
+    padding: 9px;
+    text-align: right;
+    color: white;
+    border-bottom: 5px solid var(--main-color);
+}
+.food-list .col-md-3 {
+    /* background-color: var(--danger-color); */
+    padding: 5px;
+}
+.food-list .type-food {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: var(--main-color);
+    color: white;
+    /* box-shadow: 0 0 6px 0 var(--sub-color); */
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.food-list .type-food:hover {
+    box-shadow: 0 0 6px 0 var(--sub-color);
+}
+
+.food-list .type-food i {
+    background-color: var(--sub-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#food-selected {
+    cursor: no-drop;
+    background-color: #0bd20b;
+}
+
+.food-delete,
+.cancel_order {
+    background-color: var(--danger-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-bottom: 5px solid white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.type_amount {
+    position: relative;
+    width: 150px;
+}
+
+.increace,
+.dicreace {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    top: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.increace {
+    right: 0;
+    background-color: #38ff00;
+}
+
+.dicreace {
+    left: 0;
+    background-color: var(--danger-color);
+}
+
+.hide-order {
+    display: none;
+}
+.done-reset {
+    cursor: no-drop !important;
+}
+/* ======= End  sales table page style ====== */
+
+/* ======= Start  buys  page style ====== */
+.form-add-buys {
+    padding: 10px 30%;
+}
+
+.form-add-buys .row {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.form-add-buys button {
+    width: 100%;
+}
+/* ======= End  buys  page style ====== */
+
+/* ======= Start  suppliers  page style ====== */
+.supplier-content {
+    min-height: 80vh;
+}
+.supplier-content .form-add-supplier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.form-add-supplier .row {
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+.form-add-supplier .row .col-md-6 {
+    max-width: 100% !important;
+    padding: 0;
+}
+.form-add-supplier input,
+.form-add-supplier button {
+    width: 70%;
+}
+
+/* ======= End  supplier page style ====== */
+
+/* ======= Start  reporting page style ====== */
+.form-sales-report {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.form-sales-report .row {
+    width: 50%;
+}
+
+.form-sales-report label {
+    width: 100%;
+    text-align: right;
+}
+.form-sales-report button {
+    width: 100%;
+}
+/* ======= End  reporting page style ====== */
